@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">29,920</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">AllTestCases.Device1Tests</td><td><a href="#m0">device1_WB_Test</a></td><td rowspan="1">1675424530626</td><td rowspan="1">1106</td></tr></tbody>
+</table>
+<h2>Test</h2><h3 id="m0">AllTestCases.Device1Tests#device1_WB_Test</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Cannot start the &apos;com.whatsapp.w4b&apos; application. Visit https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/android/activity-startup.md for troubleshooting. Original error: Error executing adbExec. Original error: &apos;Command &apos;C:\\Users\\patil\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s 192.168.29.129\:5555 shell am start -W -n com.whatsapp.w4b/com.whatsapp.settings.Settings -S&apos; exited with code 255&apos;; Command output: Security exception: Permission Denial: starting Intent { flg=0x10000000 cmp=com.whatsapp.w4b/com.whatsapp.settings.Settings } from null (pid=25113, uid=2000) not exported from uid 10229
+
+java.lang.SecurityException: Permission Denial: starting Intent { flg=0x10000000 cmp=com.whatsapp.w4b/com.whatsapp.settings.Settings } from null (pid=25113, uid=2000) not exported from uid 10229
+	at com.android.server.wm.ActivityStackSupervisor.checkStartAnyActivityPermission(ActivityStackSupervisor.java:1089)
+	at com.android.server.wm.ActivityStarter.startActivity(ActivityStarter.java:789)
+	at com.android.server.wm.ActivityStarter.startActivity(ActivityStarter.java:588)
+	at com.android.server.wm.ActivityStarter.startActivityMayWait(ActivityStarter.java:1392)
+	at com.android.server.wm.ActivityStarter.execute(ActivityStarter.java:519)
+	at com.android.server.wm.ActivityTaskManagerService.startActivityAndWait(ActivityTaskManagerService.java:1264)
+	at com.android.server.am.ActivityManagerService.startActivityAndWait(ActivityManagerService.java:3581)
+	at com.android.server.am.ActivityManagerShellCommand.runStartActivity(ActivityManagerShellCommand.java:513)
+	at com.android.server.am.ActivityManagerShellCommand.onCommand(ActivityManagerShellCommand.java:172)
+	at android.os.ShellCommand.exec(ShellCommand.java:111)
+	at com.android.server.am.ActivityManagerService.onShellCommand(ActivityManagerService.java:10093)
+	at android.os.Binder.shellCommand(Binder.java:881)
+	at android.os.Binder.onTransact(Binder.java:765)
+	at android.app.IActivityManager$Stub.onTransact(IActivityManager.java:4727)
+	at com.android.server.am.ActivityManagerService.onTransact(ActivityManagerService.java:2799)
+	at android.os.Binder.execTransactInternal(Binder.java:1021)
+	at android.os.Binder.execTransact(Binder.java:994)
+
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [35879d93-2073-47a5-8f4d-e652cf5e53a1, startActivity {appPackage=com.whatsapp.w4b, appActivity=com.whatsapp.settings.Settings, appWaitPackage=, appWaitActivity=, dontStopAppOnReset=false, intentAction=, intentCategory=, intentFlags=, optionalIntentArguments=}]
+Capabilities {appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UIAutomator2, platformName: android, udid: 192.168.29.129:5555}, appium:deviceApiLevel: 29, appium:deviceManufacturer: Xiaomi, appium:deviceModel: POCO F1, appium:deviceName: 192.168.29.129:5555, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2246, appium:deviceUDID: 192.168.29.129:5555, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 10, appium:statBarHeight: 89, appium:takesScreenshot: true, appium:udid: 192.168.29.129:5555, appium:viewportRect: {height: 1938, left: 0, top: 89, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 35879d93-2073-47a5-8f4d-e652cf5e53a1
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:267)
+	at io.appium.java_client.CommandExecutionHelper.execute(CommandExecutionHelper.java:27)
+	at io.appium.java_client.android.StartsActivity.startActivity(StartsActivity.java:45)
+	at Backup.Actions.startHomeActivity(Actions.java:63)
+	at AllTestCases.Device1Tests.device1_WB_Test(Device1Tests.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
